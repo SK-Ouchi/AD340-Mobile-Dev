@@ -5,33 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="57dp"
-        android:layout_width="411dp"
-        tools:layout_conversion_absoluteX="0dp"
-        tools:layout_conversion_absoluteY="0dp"
-        tools:layout_conversion_absoluteWidth="411dp"
-        tools:layout_conversion_absoluteHeight="57dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp">
-
-    </android.support.design.widget.AppBarLayout>
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_conversion_absoluteX="355dp"
-        tools:layout_conversion_absoluteY="603dp"
-        tools:layout_conversion_absoluteWidth="40dp"
-        tools:layout_conversion_absoluteHeight="40dp" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <include
         layout="@layout/content_main"
@@ -50,7 +31,8 @@
         tools:layout_conversion_absoluteX="16dp"
         tools:layout_conversion_absoluteY="80dp"
         tools:layout_conversion_absoluteWidth="395dp"
-        tools:layout_conversion_absoluteHeight="187dp" />
+        tools:layout_conversion_absoluteHeight="187dp"
+        android:id="@+id/include2" />
 
     <EditText
         android:id="@+id/editText"
@@ -66,7 +48,8 @@
         tools:layout_conversion_absoluteWidth="243dp"
         tools:layout_conversion_absoluteHeight="49dp"
         android:layout_marginLeft="7dp"
-        android:layout_marginTop="165dp" />
+        android:layout_marginTop="165dp"
+        android:layout_marginStart="7dp" />
 
     <Button
         android:id="@+id/button"
@@ -81,19 +64,5 @@
         tools:layout_conversion_absoluteY="259dp"
         tools:layout_conversion_absoluteWidth="88dp"
         tools:layout_conversion_absoluteHeight="48dp" />
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="379dp"
-        android:layout_height="56dp"
-        tools:layout_conversion_absoluteX="16dp"
-        tools:layout_conversion_absoluteY="500dp"
-        tools:layout_conversion_absoluteWidth="379dp"
-        tools:layout_conversion_absoluteHeight="56dp"
-        tools:layout_editor_absoluteY="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"></android.support.v7.widget.Toolbar>
-
 
 </android.support.constraint.ConstraintLayout>

@@ -1,25 +1,54 @@
 package com.example.sko.wip;
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
+
+public class Assignment3RecycleV extends AppCompatActivity {
+    private static final String TAG = Assignment3RecycleV.class.getSimpleName();
 
 
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+    RecyclerView recyclerView;
+
+    Context context;
+
+    RecyclerView.Adapter recyclerView_Adapter;
+
+    RecyclerView.LayoutManager recyclerViewLayoutManager;
+
+    String[] numbers = {
+            "Hello", "Goodbye",
+            "Up", "Down",
+            "In", "Out",
+            "Low", "High",
+            "Zero", "One",
+            "Black", "White",
+            "Day","Night",
+            "Rich","Broke as all hell",
+            "Pass","Fail",
+            "X","O",
+            "A","Z",
+            "You","Me",
+            "Good","Bad",
+            "Test of a single card"
+
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_assignment3_recycle_v);
+
         if (savedInstanceState != null) {
             Log.d(TAG, "onCreate() Restoring previous state");
             /* restore state */
@@ -28,13 +57,25 @@ public class MainActivity extends AppCompatActivity {
             /* initialize app */
         }
 
-        setContentView(R.layout.activity_main);
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
 
         assert getSupportActionBar() != null;
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+        context = getApplicationContext();
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
+
+        //Change 2 to your choice because here 2 is the number of Grid layout Columns in each row.
+        recyclerViewLayoutManager = new GridLayoutManager(context, 2);
+
+        recyclerView.setLayoutManager(recyclerViewLayoutManager);
+
+        recyclerView_Adapter = new RecyclerViewAdapter(context,numbers);
+
+        recyclerView.setAdapter(recyclerView_Adapter);
 
     }
 
@@ -56,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_about:
-                Intent intent_about = new Intent(this, About.class);
-                startActivity(intent_about);
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
                 return true;
 
             case R.id.action_assignment3:
@@ -77,18 +118,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
-
-    /** Called when the user taps the Send button */
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-
-    }
 }
-
 

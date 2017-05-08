@@ -5,27 +5,49 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Assignment1"
+        android:label="Work In Progress"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="Assignment1"
+            android:name=".Assignment3Gridview"
+            android:label="Work In Progress"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity" >
+
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="Assignment2"
+            android:parentActivityName=".MainActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Assignment1"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.example.sko.wip.Assignment3Gridview"/>
+
+        <activity
+            android:name=".Assignment3RecycleV"
+            android:label="Recycle View"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.example.sko.wip.Assignment3Gridview"/>
+
+        <activity
+            android:name=".About"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName="com.example.sko.wip.Assignment3Gridview">
+        </activity>
+
     </application>
 
 </manifest>
