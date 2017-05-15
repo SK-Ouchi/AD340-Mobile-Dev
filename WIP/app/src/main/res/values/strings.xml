@@ -6,4 +6,5 @@
     <string name="title_activity_display_message">DisplayMessageActivity</string>
     <string name="title_activity_assignment3_gridview">Assignment3Gridview</string>
     <string name="title_activity_assignment3_recycle_v">Assignment3RecycleV</string>
+    <string name="title_activity_assignment5_network">Assignment5Network</string>
 </resources>

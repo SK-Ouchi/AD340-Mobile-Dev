@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent_assign_1);
                 return true;
 
+            case R.id.action_assign5:
+                Intent intent_assign_5 = new Intent(this, Assignment5RecycleView.class);
+                startActivity(intent_assign_5);
+                return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.

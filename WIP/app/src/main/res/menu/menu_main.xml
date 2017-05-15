@@ -19,6 +19,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/action_assign5"
+        android:title="Assignment5"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:title="Settings (Not Available)"
         app:showAsAction="never" />

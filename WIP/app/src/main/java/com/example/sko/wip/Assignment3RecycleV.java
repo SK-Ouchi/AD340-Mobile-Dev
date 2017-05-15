@@ -12,7 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Assignment3RecycleV extends AppCompatActivity {
+public class Assignment3RecycleV extends AppCompatActivity  {
+
     private static final String TAG = Assignment3RecycleV.class.getSimpleName();
 
 
@@ -109,6 +110,11 @@ public class Assignment3RecycleV extends AppCompatActivity {
             case R.id.action_assign1:
                 Intent intent_assign_1 = new Intent(this, MainActivity.class);
                 startActivity(intent_assign_1);
+                return true;
+
+            case R.id.action_assign5:
+                Intent intent_assign_5 = new Intent(this, Assignment5RecycleView.class);
+                startActivity(intent_assign_5);
                 return true;
 
             default:
