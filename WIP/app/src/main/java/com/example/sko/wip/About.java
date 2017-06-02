@@ -75,6 +75,11 @@ public class About extends AppCompatActivity {
                 startActivity(intent_assign_5);
                 return true;
 
+            case R.id.action_assign7:
+                Intent intent_assign_7 = new Intent(this, Assignment7.class);
+                startActivity(intent_assign_7);
+                return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.

@@ -22,6 +22,10 @@
         android:id="@+id/action_assign5"
         android:title="Assignment5"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_assign7"
+        android:title="Assignment7"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_settings"
