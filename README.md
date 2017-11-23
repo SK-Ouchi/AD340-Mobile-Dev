@@ -1,5 +1,4 @@
 # AD340-Mobile-Dev
-Web Development
 
 A repository for North Seattle College's Android Development class. Incoroporates different functionalities a user may find 
 in common Android apps. 
